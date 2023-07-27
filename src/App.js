@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import {
@@ -10,8 +10,8 @@ import {
 } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import firebase from "firebase/compat/app";
-import "firebase/auth";
+
+
 import Home from "./Pages/Home";
 import Signin from "./Pages/Signin";
 import Signup from "./Pages/Singup";
@@ -22,12 +22,17 @@ import NavBar from "./layout/navbar";
 import firebaseConfig from "./config/firebaseConfig";
 import Loading from "./layout/Loading";
 import ProcessingContext from "./context/ProcessingContext";
+import firebase from 'firebase/compat/app';
+import { getAuth } from "firebase/auth";
 firebase.initializeApp(firebaseConfig);
-
+const auth = getAuth();
 
 function App() {
   const user = useState(null);
   const loadingBar  = useState(false);
+
+  
+
   return (
     
     <ProcessingContext.Provider value={loadingBar}>

@@ -84,10 +84,28 @@ button:hover{
     border: none;
     outline: none;
 }
+.home{
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width : 800px) {
+    .home{
+        flex-direction: column;
+    }
+    
+}
+.search{
+    
+    
+}
+.results{
+    
+}
 .spinner-outer{
   height: 100vh;
   font-weight: 100vh;
   width: 100vw;
+  z-index: 100;
   display: flex;
   background : rgba(76, 175, 80, 0.3);
   justify-content: center;

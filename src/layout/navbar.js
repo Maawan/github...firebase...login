@@ -18,6 +18,8 @@ import { toast } from "react-toastify";
 import ProcessingContext from "../context/ProcessingContext";
 firebase.initializeApp(firebaseConfig);
 const auth = getAuth();
+
+
 const NavBar = () => {
     const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
