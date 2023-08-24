@@ -15,7 +15,6 @@ const auth = getAuth();
 
 const Signin = () => {
   const navigate = useNavigate();
-
   const [email , setEmail] = useState("");
   const [pass , setPass] = useState("");
   const [loadingBar , setLoadingBar] = useContext(ProcessingContext)
